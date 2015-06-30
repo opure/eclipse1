@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <title>铭飞CMS</title> 
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <link rel="stylesheet" type="text/css" href="../jquery/zTree_v3/zTreeStyle.css" media="all" /> 
+  <script type="text/javascript" src="../jquery/jquery-1.10.2.min.js"></script> 
+  <script type="text/javascript" src="../jquery/zTree_v3/jquery.ztree.all-3.5.min.js"></script> 
+<style>
+	.container{margin:0;padding:0;width:auto}
+	.container .marginleft30{ margin-left:30px;}
+	#treeDemoTest span{font-size:16px;}
+	#treeDemoTest a:hover {text-decoration:none;}
+	#treeDemoTest li{min-height:30px; line-height:30px;}
+	#treeDemoTest li a{ padding:0px; height:36px;}
+	#treeDemoTest li a.curSelectedNode{ background-color:#FFF; border:none;}
+	#treeDemoTest li span.button.ico_open{ margin-top:7px;}
+	#treeDemoTest li span.button.ico_docu{ margin-top:7px;}
+	#treeDemoTest li span.button.switch{ display:none;}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+	  	   <div class="col-md-3 marginleft30">	
+			  <div class="content_wrap">
+					<div class="zTreeDemoBackground left">
+						<ul id="treeDemoTest" class="ztree"></ul>
+					</div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	
+	<script type="text/javascript">
+		function getFont(treeId, node) {
+			return node.font ? node.font : {};
+		}
+		var settingTest = {
+			view: {
+				fontCss: getFont,
+				showLine: false
+			},
+			data: {
+				simpleData: {
+					enable: true
+				}
+			}
+		};
+		var Nname = new Array();
+		Nname[0] = "角色";
+		Nname[1] = "管理员管理：对管理员进行增删改查操作，可为管理员选择不同的角色。";
+		Nname[2] = "角色管理：对角色进行增删改查操作，可为角色选择不同的功能模块。";
+		Nname[3] = "站点管理：对站点管理员进行密码或昵称修改，对网站基本信息进行修改。";
+		Nname[4] = "文章";
+		Nname[5] = "栏目管理：对栏目进行增删改查操作，子栏目可以无限级延伸。若栏目属性选择封面，则不能用有子栏目，且只能发布单篇文章。";
+		Nname[6] = "文章管理：对文章进行增删改查操作，可为文章选择不同的栏目。";
+		Nname[7] = "生成";
+		Nname[8] = "一键更新：对全站所有的HTML进行更新。";
+		Nname[9] = "更新文档：可更新发布的文章，生成静态页面。";
+		var zNodesTest =[
+			{ id:1, pId:0, name:Nname[0], open:true, icon:"../jquery/zTree_v3/img/1_open.png", font:{'font-weight':'bold'}},
+			{ id:11, pId:1, name:Nname[1], icon:"../jquery/zTree_v3/img/2.png"},
+			{ id:12, pId:1, name:Nname[2], icon:"../jquery/zTree_v3/img/3.png"},
+			{ id:13, pId:1, name:Nname[3], icon:"../jquery/zTree_v3/img/5.png"},
+			{ id:2, pId:0, name:Nname[4], open:true, icon:"../jquery/zTree_v3/img/1_open.png", font:{'font-weight':'bold'}},
+			{ id:21, pId:2, name:Nname[5], icon:"../jquery/zTree_v3/img/6.png"},
+			{ id:22, pId:2, name:Nname[6], icon:"../jquery/zTree_v3/img/7.png"},
+			{ id:3, pId:0, name:Nname[7], open:true, icon:"../jquery/zTree_v3/img/1_open.png", font:{'font-weight':'bold'}},
+			{ id:31, pId:3, name:Nname[8], icon:"../jquery/zTree_v3/img/8.png"},
+			{ id:32, pId:3, name:Nname[9], icon:"../jquery/zTree_v3/img/9.png"}
+		];
+		$(document).ready(function(){
+			$.fn.zTree.init($("#treeDemoTest"), settingTest, zNodesTest);
+			$(".ico_open").parent().find("span:last").css("font-size","20px");
+		});
+	</script>
+</body>
+</html>

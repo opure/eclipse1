@@ -1,0 +1,6 @@
+数据库连接文件:src/main/resources/config.properties
+
+默认访问:http://localhost:8080
+后台管理:http://localhost:8080/msadmin/
+账号:admin
+密码:cms

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="ms-cms">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/basic"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/attention"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/cms"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/people"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/base"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java/install"/>
+        <property name="java-output-path" value="/ms-cms/src/main/webapp/WEB-INF/classes"/>
+        <property name="context-root" value="/ROOT"/>
+    </wb-module>
+</project-modules>
